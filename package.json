@@ -2,8 +2,9 @@
     "name": "xcode-keybindings",
     "displayName": "Xcode Keymap",
     "description": "Popular Xcode keybindings for VS Code.",
-    "version": "1.0.0",
+    "version": "1.9.0",
     "publisher": "stevemoser",
+    "homepage": "https://github.com/stevemoser/vscode-xcode-keybindings/#readme",
     "engines": {
         "vscode": "^1.6.0"
     },
@@ -11,7 +12,13 @@
         "Keymaps"
     ],
     "keywords": [
-        "keymap"
+        "Keymap",
+        "Keybinding",
+        "Swift",
+        "ObjC",
+        "Apple",
+        "Mac",
+        "Xcode"
     ],
     "repository": {
         "type": "git",
@@ -24,6 +31,18 @@
     "icon": "xcode-keyboard.png",
     "contributes": {
         "keybindings": [
+			{
+				"key": "cmd+e",
+				"command": "editor.action.addSelectionToNextFindMatch"
+			},         
+			{
+				"key": "cmd+shift+j",
+				"command": "workbench.files.action.showActiveFileInExplorer"
+			},            
+			{
+				"key": "cmd+ctrl+up",
+				"command": "C_Cpp.SwitchHeaderSource"
+			},            
             {
                 "key": "shift+cmd+]",
                 "command": "workbench.action.nextEditor"
@@ -41,11 +60,11 @@
                 "command": "workbench.action.quickOpen"
             },
             {
-                "key": "ctrl+cmd+right",
+                "key": "ctrl+cmd+left",
                 "command": "workbench.action.navigateBack"
             },
             {
-                "key": "ctrl+cmd+left",
+                "key": "ctrl+cmd+right",
                 "command": "workbench.action.navigateForward"
             },
             {
@@ -88,6 +107,10 @@
                 "command": "workbench.action.tasks.build"
             },
             {
+                "key": "cmd+u",
+                "command": "workbench.action.tasks.test"
+            },
+            {
                 "key": "cmd+0",
                 "command": "workbench.action.toggleSidebarVisibility"
             },
@@ -122,9 +145,55 @@
                 "when": "textInputFocus && !editorReadonly"
             },
             {
+                "key": "alt+cmd+left",
+                "command": "editor.fold"
+            },
+            {
+                "key": "alt+cmd+right",
+                "command": "editor.unfold"
+            },
+            {
+                "key": "alt+cmd+[",
+                "command": "editor.action.moveLinesUpAction"
+            },
+            {
+                "key": "alt+cmd+]",
+                "command": "editor.action.moveLinesDownAction"
+            },
+            {
+                "key": "alt+up",
+                "command": "cursorHome",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "alt+down",
+                "command": "cursorEnd",
+                "when": "textInputFocus"
+            },
+            {
+                "key": "ctrl+cmd+e",
+                "command": "editor.action.changeAll",
+                "when": "editorTextFocus && !editorReadonly"
+            },
+            {
                 "key": "enter",
                 "command": "acceptSelectedSuggestion",
                 "when": "editorTextFocus && suggestWidgetVisible"
+            },
+            {
+                "key": "ctrl+shift+up",
+                "command": "editor.action.insertCursorAbove",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "ctrl+shift+down",
+                "command": "editor.action.insertCursorBelow",
+                "when": "editorTextFocus"
+            },
+            {
+                "key": "cmd+l",
+                "command": "workbench.action.gotoLine",
+                "when": "textInputFocus"
             }
         ]
     },
